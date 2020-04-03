@@ -7,8 +7,13 @@
     <div class="cameras-listing">
 		<h1>All Cameras</h1>
 
-		<div v-for="item in filteredItems" class="single-product">
-			<h2 v-rainbow>{{ item.brand | uppercase}}</h2>
+		<div v-for="item in filteredItems" class="single-product" :key="item.id">
+		        <router-link :to="'product/' + item.id">
+					<h2 v-rainbow>{{ item.brand | uppercase}}</h2>
+		        </router-link>
+
+
+
 			<p>{{ item.model }}</p>
 			<p>{{ item.sensor }}</p>
 			<p>{{ item.pixels }}</p>

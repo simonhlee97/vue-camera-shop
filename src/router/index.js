@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import AddProduct from '../views/AddProduct.vue'
 import Login from '../views/Login.vue'
+import SingleProduct from '../views/SingleProduct.vue'
+
 
 
 Vue.use(VueRouter)
@@ -33,6 +35,11 @@ const routes = [
     path: '/products',
     name: 'Products',
     component: () => import(/* webpackChunkName: "about" */ '../views/Products.vue')
+  },
+  {
+  	path: '/product/:id',
+  	name: SingleProduct,
+  	component: () => import(/* webpackChunkName: "about" */ '../views/SingleProduct.vue')
   },
   {
     path: '/about',

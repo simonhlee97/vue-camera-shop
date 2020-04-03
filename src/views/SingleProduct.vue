@@ -1,20 +1,44 @@
 <template>
-  <div class="single-product">
-    <h1>Panasonic Lumix - GX1</h1>
-    <p>pixels: 24.2</p>
-    <p>Max resolution: 6000 x 4000</p>
-    <p>sensor type: CMOS</p>
-    <p>max shutter speed: 1/8000 sec</p>
-    <p>screen size: 3"</p>
-    <p>weight: 650 g</p>
+  <div id="single-product">
+    
+    <article>
+    	<div v-for="product in getData($route.params.id)" :key="product.id">
+	      <p>{{ product.brand }}</p>
+	      <p>{{ product.model }}</p>
+	      <p>{{ product.sensor }}</p>
+	      <p>{{ product.pixels }}</p>
+
+	    </div>
+
+
+    	<!-- <h1>{{ item.brand }}</h1>
+    	<h3>{{ item.model }}</h3>
+    	<p>pixels: {{ item.pixels }}</p> -->
+    </article>
+    
   </div>
 </template>
 
 
 
 <script>
+import products from '../../public/db.json';
+
 export default {
-	name: 'SingleProduct'
+	name: 'SingleProduct',
+	data() {
+		return {
+		  products: products
+		}
+	},
+	methods: {
+		getData(id) {
+		  let data = this.products
+		  return data.filter(item => {
+		    return item.id == id
+		  })
+		}
+	}
 }
 </script>
 
