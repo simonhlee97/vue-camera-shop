@@ -2,18 +2,23 @@
   <div class="store">
     
     <h1>Search Camera Database</h1>
-    <input type="text" placeholder="Search" />
+    <input type="text" placeholder="Search Cameras" v-model="search" />
 	<hr>
     <div class="cameras-listing">
 		<h1>All Cameras</h1>
-		<div v-for="post in posts" class="single-product">
-			<h2 v-rainbow>{{ post.title }}</h2>
-			<p>{{ post.body }}</p>
+
+		<div v-for="item in filteredItems" class="single-product">
+			<h2 v-rainbow>{{ item.brand | uppercase}}</h2>
+			<p>{{ item.model }}</p>
+			<p>{{ item.sensor }}</p>
+			<p>{{ item.pixels }}</p>
+			<p>{{ item.price }}</p>
+			<img src="https://picsum.photos/400/300" alt="cam" />
+			
 		</div>
 
     	<!-- <SingleProduct /> -->
     </div>
-    <hr>
     
     <!-- <li v-for="ninja in ninjas">
     	<h2>{{ninja.name}} - {{ninja.specialty}}</h2>
@@ -24,7 +29,10 @@
 
 
 <script>
-import axios from 'axios';
+// import searchMixin from '../mixins/searchMixin'
+
+// import axios from 'axios';
+import products from '../../public/db.json';
 
 	// import SingleProduct from '@/views/SingleProduct.vue';
 
@@ -32,31 +40,35 @@ import axios from 'axios';
 		// props: ['cameras', 'ninjas'],
 		data() {
 			return {
-				posts: [],
-				errors: []
-				// ninjas: [
-				// 	{name: 'Ryu', specialty: 'Vuetify'},
-				// 	{name: 'Ken', specialty: 'Uppercuts'},
-				// 	{name: 'Chun Li', specialty: 'Hurricane Kicks'}
-				// ]
+				items: products,
+				search: ''
 			}
 		},
-		created() {
-			// axios.get('http://jsonplaceholder.typicode.com/posts')
-			axios.get('https://github.com/simonhlee97/vue-camera-shop/blob/master/src/assets/cameras.json')
-			.then( res => {
-				// console.log( res.data.slice(0,10) );
-				console.log(res);
-				// JSON responses are automatically parsed.
-				// this.posts = res.data.slice(0,10);
-				this.posts = res.data;
-
-		    })
-		    .catch(e => {
-				this.errors.push(e)
-		    })
+		computed: {
+			filteredItems: function() {
+				return this.items.filter((item) => {
+					return item.brand.match(this.search)
+				});
+			}
 		}
+// https://github.com/simonhlee97/demo/blob/master/db.json
+		// created() {
+		// 	axios.get('https://github.com/simonhlee97/demo/db.json')
+			
+		// 	.then( res => {
+		// 	// // console.log( res.data.slice(0,10) );
+		// 	console.log(res);
+		// 	// // JSON responses are automatically parsed.
+		// 	// // this.posts = res.data.slice(0,10);
+		// 	this.posts = res.data;
+		// 	})
+		//     .catch(e => {
+		// 		this.errors.push(e)
+		//     })
+		// }
 	}
+
+			
 </script>
 
 
