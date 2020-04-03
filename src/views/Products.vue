@@ -43,7 +43,7 @@ import axios from 'axios';
 		},
 		created() {
 			// axios.get('http://jsonplaceholder.typicode.com/posts')
-			axios.get('@/src/assets/cameras.json')
+			axios.get('https://github.com/simonhlee97/vue-camera-shop/blob/master/src/assets/cameras.json')
 			.then( res => {
 				// console.log( res.data.slice(0,10) );
 				console.log(res);
