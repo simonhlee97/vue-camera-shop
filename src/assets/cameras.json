@@ -1,0 +1,43 @@
+[
+	{
+		"id": 1,
+		"brand": "Canon",
+		"model": "EOS 80D",
+		"sensor": "CMOS",
+		"pixels": 24.2,
+		"price": 600,
+		"weight": 590,
+		"image-url": "https://lorem.photo/350"
+	},
+	{
+		"id": 2,
+		"brand": "Fujifilm",
+		"model": "X-T4",
+		"sensor": "CMOS",
+		"pixels": 26.0,
+		"price": 900,
+		"weight": 522,
+		"image-url": "https://lorem.photo/350"
+	},
+	{
+		"id": 3,
+		"brand": "Canon",
+		"model": "EOS M6",
+		"sensor": "CMOS",
+		"pixels": 24.2,
+		"price": 700,
+		"weight": 588,
+		"image-url": "https://lorem.photo/350"
+	},
+	{
+		"id": 4,
+		"brand": "Fujifilm",
+		"model": "X-T30",
+		"sensor": "CMOS",
+		"pixels": 24.2,
+		"price": 500,
+		"weight": 560,
+		"image-url": "https://lorem.photo/350"
+	},
+
+]
