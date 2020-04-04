@@ -4,31 +4,36 @@
     <h1>Search Camera Database</h1>
     <input type="text" placeholder="Search Cameras" v-model="search" />
 	<hr>
-    <div class="cameras-listing">
-		<h1>All Cameras</h1>
 
-		<FilterOptions />
+	<div class="flex-container">
+		<FilterOptions style="margin:0 auto;" />
+	    <div class="list-container">
+	    	<table>
+				<tr>
+					<th>Brand</th>
+					<th>Model</th>
+					<th>Sensor</th>
+					<th>Megapixels</th>
+					<th>Price</th>
+					<th>image</th>
+				</tr>
 
-		<div v-for="item in filteredItems" class="single-product" :key="item.id">
-		        <router-link :to="'product/' + item.id">
-					<h2 v-rainbow>{{ item.brand | uppercase}}</h2>
-		        </router-link>
+				<tr v-for="item in filteredItems"  :key="item.id">
+					<td><h4 v-rainbow>{{ item.brand | uppercase}}</h4></td>
+				
+			        <td><router-link :to="'product/' + item.id">{{ item.model }}</router-link></td>
+			        
+					<td>{{ item.sensor }}</td>
+					<td>{{ item.pixels }}</td>
+					<td>{{ item.price }}</td>
+					<td><img src="https://picsum.photos/300/150" alt="cam" /></td>
+				</tr>
+	    		
+	    	</table>
 
-			<p>{{ item.model }}</p>
-			<p>{{ item.sensor }}</p>
-			<p>{{ item.pixels }}</p>
-			<p>{{ item.price }}</p>
-			<img src="https://picsum.photos/400/300" alt="cam" />
 			
-			
-		</div>
-
-    	<!-- <SingleProduct /> -->
+	    </div>
     </div>
-    
-    <!-- <li v-for="ninja in ninjas">
-    	<h2>{{ninja.name}} - {{ninja.specialty}}</h2>
-    </li> -->
     
   </div>
 </template>
@@ -37,16 +42,9 @@
 <script>
 // import searchMixin from '../mixins/searchMixin'
 import FilterOptions from '@/components/FilterOptions.vue'
-
-
-
-// import axios from 'axios';
 import products from '../../public/db.json';
 
-	// import SingleProduct from '@/views/SingleProduct.vue';
-
 	export default {
-		// props: ['cameras', 'ninjas'],
 		data() {
 			return {
 				items: products,
@@ -63,23 +61,7 @@ import products from '../../public/db.json';
 				});
 			}
 		}
-// https://github.com/simonhlee97/demo/blob/master/db.json
-		// created() {
-		// 	axios.get('https://github.com/simonhlee97/demo/db.json')
-			
-		// 	.then( res => {
-		// 	// // console.log( res.data.slice(0,10) );
-		// 	console.log(res);
-		// 	// // JSON responses are automatically parsed.
-		// 	// // this.posts = res.data.slice(0,10);
-		// 	this.posts = res.data;
-		// 	})
-		//     .catch(e => {
-		// 		this.errors.push(e)
-		//     })
-		// }
 	}
-
 			
 </script>
 
@@ -89,7 +71,7 @@ import products from '../../public/db.json';
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
-  margin: 40px 0 0;
+  margin: 20px 0 0;
 }
 ul {
   list-style-type: none;
@@ -99,14 +81,39 @@ ul {
 a {
   color: #42b983;
 }
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.list-container {
+	flex-basis: 720px;
+	flex-grow: 1;
+}
+/*
 .single-product {
-	padding: 20px;
-	margin: 20px 0;
+	padding: 9px;
+	margin: 10px 0;
 	box-sizing: border-box;
 	background: #eee;
-}
+	display: flex;
+}  */
+
 .background-image {
 	width: 400px;
 	height: 300px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 3px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
 </style>

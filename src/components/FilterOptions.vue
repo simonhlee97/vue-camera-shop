@@ -86,6 +86,6 @@ label {
 }
 .search-options > div {
 	flex-grow: 1;
-	flex-basis: 380px;
+	flex-basis: 280px;
 }
 </style>
