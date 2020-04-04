@@ -12,13 +12,12 @@
 					<h2 v-rainbow>{{ item.brand | uppercase}}</h2>
 		        </router-link>
 
-
-
 			<p>{{ item.model }}</p>
 			<p>{{ item.sensor }}</p>
 			<p>{{ item.pixels }}</p>
 			<p>{{ item.price }}</p>
 			<img src="https://picsum.photos/400/300" alt="cam" />
+			
 			
 		</div>
 
@@ -97,5 +96,9 @@ a {
 	margin: 20px 0;
 	box-sizing: border-box;
 	background: #eee;
+}
+.background-image {
+	width: 400px;
+	height: 300px;
 }
 </style>

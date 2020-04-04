@@ -2,6 +2,6 @@
   <div class="footer">
   	<hr>
     <p>copyright 2020</p>
-    <p>SimonStreetShop.com</p>
+    <p>SimonCameraShop.com</p>
   </div>
 </template>

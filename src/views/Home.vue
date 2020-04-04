@@ -1,8 +1,7 @@
 <template>
   <div class="store">
-    <h1>SimonStreetShop.com</h1>
     
-    <p>Heaven for Street Photographers (online)</p>
+    <p>Just a fictious store for photographers</p>
 
     <Featured />
     

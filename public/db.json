@@ -7,7 +7,7 @@
 		"pixels": 24.2,
 		"price": 600,
 		"weight": 590,
-		"image-url": "https://picsum.photos/400/300"
+		"imageurl": "https://picsum.photos/400/300"
 	},
 	{
 		"id": 2,
@@ -17,7 +17,7 @@
 		"pixels": 26.0,
 		"price": 900,
 		"weight": 522,
-		"image-url": "https://picsum.photos/400/300"
+		"imageurl": "https://picsum.photos/400/300"
 	},
 	{
 		"id": 3,
@@ -27,7 +27,7 @@
 		"pixels": 24.2,
 		"price": 700,
 		"weight": 588,
-		"image-url": "https://picsum.photos/400/300"
+		"imageurl": "https://picsum.photos/400/300"
 	},
 	{
 		"id": 4,
@@ -37,7 +37,7 @@
 		"pixels": 24.2,
 		"price": 500,
 		"weight": 560,
-		"image-url": "https://picsum.photos/400/300"
+		"imageurl": "https://picsum.photos/400/300"
 	},
 	{
 		"id": 5,
@@ -47,7 +47,7 @@
 		"pixels": 24.2,
 		"price": 950,
 		"weight": 610,
-		"image-url": "https://picsum.photos/400/300"
+		"imageurl": "https://picsum.photos/400/300"
 	},
 	{
 		"id": 6,
@@ -57,7 +57,7 @@
 		"pixels": 24.0,
 		"price": 400,
 		"weight": 541,
-		"image-url": "https://picsum.photos/400/300"
+		"imageurl": "https://picsum.photos/400/300"
 	},
 	{
 		"id": 7,
@@ -67,7 +67,7 @@
 		"pixels": 24.2,
 		"price": 780,
 		"weight": 538,
-		"image-url": "https://picsum.photos/400/300"
+		"imageurl": "https://picsum.photos/400/300"
 	},
 	{
 		"id": 8,
@@ -77,6 +77,6 @@
 		"pixels": 24.2,
 		"price": 400,
 		"weight": 560,
-		"image-url": "https://picsum.photos/400/300"
+		"imageurl": "https://picsum.photos/400/300"
 	}
 ]
