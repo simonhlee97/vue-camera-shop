@@ -7,6 +7,8 @@
     <div class="cameras-listing">
 		<h1>All Cameras</h1>
 
+		<FilterOptions />
+
 		<div v-for="item in filteredItems" class="single-product" :key="item.id">
 		        <router-link :to="'product/' + item.id">
 					<h2 v-rainbow>{{ item.brand | uppercase}}</h2>
@@ -34,6 +36,9 @@
 
 <script>
 // import searchMixin from '../mixins/searchMixin'
+import FilterOptions from '@/components/FilterOptions.vue'
+
+
 
 // import axios from 'axios';
 import products from '../../public/db.json';
@@ -47,6 +52,9 @@ import products from '../../public/db.json';
 				items: products,
 				search: ''
 			}
+		},
+		components: {
+			FilterOptions
 		},
 		computed: {
 			filteredItems: function() {

@@ -1,8 +1,6 @@
 <template>
   <div class="store">
     
-    <p>Just a fictious store for photographers</p>
-
     <Featured />
     
   </div>
