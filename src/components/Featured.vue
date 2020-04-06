@@ -12,7 +12,7 @@
 		</div>
 		<div class="box box2">
 			<h3>This Week's Review</h3>
-    		<iframe width="560" height="315" src="https://www.youtube.com/embed/HwuUKwqVAqQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    		<iframe width="560" height="315" src="https://www.youtube.com/embed/ajCU94KAUzU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 
 		<div class="box box3">
