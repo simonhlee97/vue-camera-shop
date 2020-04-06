@@ -3,10 +3,22 @@
     
     <article>
     	<div v-for="product in getData($route.params.id)" :key="product.id">
-	      <p>{{ product.brand }}</p>
-	      <p>{{ product.model }}</p>
-	      <p>{{ product.sensor }}</p>
-	      <p>{{ product.pixels }}</p>
+    		<p><img :src="product.image" alt="image" /></p>
+	      <p>Model: {{ product.Model }}</p>
+	      <p>Year: {{ product.Year }}</p>
+	      <p>Weight: {{ product.Weight }}</p>
+	      <p>Viewfinder: {{ product.Viewfinder }}</p>
+	      <p>Screen size: {{ product.screen_size }}</p>
+	      <p>Screen Resolution: {{ product.screen_resolution }}</p>
+
+	      <p>Max Shutter Speed: {{ product.max_shutter_speed }}</p>
+	      <p>ISO: {{ product.ISO }}</p>
+
+	      <p>back to List</p>
+
+	      
+
+
 
 	    </div>
 
@@ -22,7 +34,7 @@
 
 
 <script>
-import products from '../../public/db.json';
+import products from '../../public/leica.json';
 
 export default {
 	name: 'SingleProduct',

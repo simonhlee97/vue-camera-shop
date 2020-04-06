@@ -10,21 +10,24 @@
 	    <div class="list-container">
 	    	<table>
 				<tr>
-					<th>Brand</th>
 					<th>Model</th>
-					<th>Sensor</th>
-					<th>Megapixels</th>
-					<th> &#8681; Price</th>
-					<th>image</th>
+					<th>Total MegaPixels</th>
+					<th>Sensor Type</th>
+					<th>Max Resolution</th>
+					<th>Crop Factor</th>
+					<th>Optical Zoom</th>
+					<th>photo</th>
 				</tr>
 
 				<tr v-for="item in filteredItems"  :key="item.id">
-					<td><h4 v-rainbow>{{ item.brand | uppercase}}</h4></td>
-			        <td><router-link :to="'product/' + item.id">{{ item.model }}</router-link></td>
-					<td>{{ item.sensor }}</td>
-					<td>{{ item.pixels }}</td>
-					<td>{{ item.price }}</td>
-					<td><img id="camThumb" :src="item.imageurl" alt="thumb" /></td>
+					<td><router-link :to="'product/' + item.id"><h4 v-rainbow>{{ item.Model}}</h4></router-link></td>
+			        <td>{{ item.Totalmegapixels }}</td>
+					<td>{{ item.sensor_type }}</td>
+					<td>{{ item.max_image_res }}</td>
+					<td>{{ item.crop_factor }}</td>
+					<td>{{ item.optical_zoom }}</td>
+					<td><img :src="item.image" alt="image" /></td>
+
 				</tr>
 	    	</table>
 	    </div>
@@ -41,7 +44,7 @@
 <script>
 // import searchMixin from '../mixins/searchMixin'
 import FilterOptions from '@/components/FilterOptions.vue'
-import products from '../../public/db.json';
+import products from '../../public/leica.json';
 
 	export default {
 		data() {
@@ -56,7 +59,7 @@ import products from '../../public/db.json';
 		computed: {
 			filteredItems: function() {
 				return this.items.filter((item) => {
-					return item.brand.match(this.search)
+					return item.Model.match(this.search)
 				});
 			}
 		}
