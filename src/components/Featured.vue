@@ -114,7 +114,10 @@ export default {
 		width: 303px;
 		height: auto;
 	}
-	.box1, .box3, .box4 {
+	.box4 {
+		flex-basis:450px;
+	}
+	.box1, .box3 {
 		width: 400px;
 	}
 	.container {
@@ -123,7 +126,7 @@ export default {
 	}
 	.box {
 		flex-grow: 1;
-		margin: 6px;
+		margin: 9px;
 		border-radius: 5px;
 		box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 	}

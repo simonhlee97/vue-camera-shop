@@ -17,12 +17,16 @@
 		<div class="search-prices">
 			<h4>Search by Price</h4>
 			<form>
-				<input type="checkbox" id="price1" name="price1" value="0 - $199">
+				<input type="checkbox" id="price1" name="price1" value="0 - $299">
 				<label for="price1">0 - $199</label><br>
-				<input type="checkbox" id="price2" name="price2" value="$200 - $499">
+				<input type="checkbox" id="price2" name="price2" value="$300 - $599">
 				<label for="price2">$200 - $499</label><br>
-				<input type="checkbox" id="price3" name="price3" value="$500 - $799">
-				<label for="price3">$500 - $799</label><br><br>
+				<input type="checkbox" id="price3" name="price3" value="$600 - $899">
+				<label for="price3">$500 - $799</label><br>
+				<input type="checkbox" id="price3" name="price3" value="$900 - $1199">
+				<label for="price3">$900 - $1199</label><br>
+				<input type="checkbox" id="price3" name="price3" value="$900 - $1199">
+				<label for="price3">$1200 + </label><br><br>
 			</form>
 		</div>
 		<div class="search-pixels">
@@ -86,6 +90,6 @@ label {
 }
 .search-options > div {
 	flex-grow: 1;
-	flex-basis: 280px;
+	flex-basis: 200px;
 }
 </style>

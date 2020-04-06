@@ -14,26 +14,25 @@
 					<th>Model</th>
 					<th>Sensor</th>
 					<th>Megapixels</th>
-					<th>Price</th>
+					<th> &#8681; Price</th>
 					<th>image</th>
 				</tr>
 
 				<tr v-for="item in filteredItems"  :key="item.id">
 					<td><h4 v-rainbow>{{ item.brand | uppercase}}</h4></td>
-				
 			        <td><router-link :to="'product/' + item.id">{{ item.model }}</router-link></td>
-			        
 					<td>{{ item.sensor }}</td>
 					<td>{{ item.pixels }}</td>
 					<td>{{ item.price }}</td>
-					<td><img src="https://picsum.photos/300/150" alt="cam" /></td>
+					<td><img id="camThumb" :src="item.imageurl" alt="thumb" /></td>
 				</tr>
-	    		
 	    	</table>
-
-			
 	    </div>
+	    
     </div>
+    <div class="pagination">
+	    <span style='font-size:30px;'>&#8701; prev</span> <span style='font-size:30px;'>next &#8702;</span>
+	</div>
     
   </div>
 </template>
@@ -98,6 +97,11 @@ a {
 	background: #eee;
 	display: flex;
 }  */
+#camThumb {
+	height: 48px;
+	width: auto;
+}
+
 
 .background-image {
 	width: 400px;
@@ -109,7 +113,7 @@ table {
   width: 100%;
 }
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #000;
   text-align: left;
   padding: 3px;
 }
