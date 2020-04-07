@@ -26,7 +26,7 @@
 					<td>{{ item.max_image_res }}</td>
 					<td>{{ item.crop_factor }}</td>
 					<td>{{ item.optical_zoom }}</td>
-					<td><img :src="item.image" alt="image" /></td>
+					<td><img class="thumbnail" :src="item.image" alt="image" /></td>
 
 				</tr>
 	    	</table>
@@ -92,20 +92,14 @@ a {
 	flex-basis: 720px;
 	flex-grow: 1;
 }
-/*
-.single-product {
-	padding: 9px;
-	margin: 10px 0;
-	box-sizing: border-box;
-	background: #eee;
-	display: flex;
-}  */
 #camThumb {
 	height: 48px;
 	width: auto;
 }
-
-
+.thumbnail {
+	height: 45px;
+	width: auto;
+}
 .background-image {
 	width: 400px;
 	height: 300px;

@@ -4,13 +4,13 @@
 		<div class="search-brands">
 			<h4>Search by Brand</h4>
 			<form>
-				<input type="checkbox" id="brand1" name="brand1" value="Canon">
+				<input class="searchby" type="checkbox" id="brand1" name="brand1" value="Canon">
 				<label for="brand1"> Canon</label><br>
-				<input type="checkbox" id="brand2" name="brand2" value="Fujifilm">
+				<input class="searchby" type="checkbox" id="brand2" name="brand2" value="Fujifilm">
 				<label for="brand2"> Fujifilm</label><br>
-				<input type="checkbox" id="brand3" name="brand3" value="Nikon">
+				<input class="searchby" type="checkbox" id="brand3" name="brand3" value="Nikon">
 				<label for="brand3"> Nikon</label><br>
-				<input type="checkbox" id="brand4" name="brand4" value="Sony">
+				<input class="searchby" type="checkbox" id="brand4" name="brand4" value="Sony">
 				<label for="brand4"> Sony</label><br>
 			</form>
 		</div>
@@ -77,9 +77,11 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style scoped>
+
 input[type=checkbox] {
     display: inline;
+    margin-bottom: 0;
 }
 label {
     display: inline;
