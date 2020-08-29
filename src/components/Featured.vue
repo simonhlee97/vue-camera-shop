@@ -49,23 +49,23 @@ export default {
 			images: [
             {
                 id: '1',
-                big: 'https://i.picsum.photos/id/201/450/300.jpg',
-                thumb: 'https://i.picsum.photos/id/201/110/90.jpg'
-            },
-            {
+                big: 'https://res.cloudinary.com/ryucave/image/upload/v1598497799/Day-6-Jeju/lum-aqua-2_zkamfa.jpg',
+                thumb: 'https://res.cloudinary.com/ryucave/image/upload/c_thumb,w_200,g_face/v1598497799/Day-6-Jeju/lum-aqua-2_zkamfa.jpg'
+						},
+						{
                 id: '2',
-                big: 'https://i.picsum.photos/id/204/450/300.jpg',
-                thumb: 'https://i.picsum.photos/id/204/110/90.jpg'
-            },
-            {
+                big: 'https://res.cloudinary.com/ryucave/image/upload/v1598433348/Day-1-Jeju/lum-beach-1_kb2btu.jpg',
+                thumb: 'https://res.cloudinary.com/ryucave/image/upload/c_thumb,w_200,g_face/v1598433348/Day-1-Jeju/lum-beach-1_kb2btu.jpg'
+						},
+						{
                 id: '3',
-                big: 'https://i.picsum.photos/id/1079/450/300.jpg?grayscale',
-                thumb: 'https://i.picsum.photos/id/1079/110/90.jpg?grayscale'
-            },
-            {
+                big: 'https://res.cloudinary.com/ryucave/image/upload/v1598433988/Day-1-Jeju/lum-beach-4_jwpyck.jpg',
+                thumb: 'https://res.cloudinary.com/ryucave/image/upload/c_thumb,w_200,g_face/v1598433988/Day-1-Jeju/lum-beach-4_jwpyck.jpg'
+						},
+						{
                 id: '4',
-                big: 'https://i.picsum.photos/id/223/450/300.jpg',
-                thumb: 'https://i.picsum.photos/id/223/110/90.jpg'
+                big: 'https://res.cloudinary.com/ryucave/image/upload/v1598523595/Day-3-Jeju/lum-waterfall-3_bqib29.jpg',
+                thumb: 'https://res.cloudinary.com/ryucave/image/upload/c_thumb,w_200,g_face/v1598523595/Day-3-Jeju/lum-waterfall-3_bqib29.jpg'
             }
             ],
             activeImage: 0,

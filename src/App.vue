@@ -1,14 +1,8 @@
 <template>
   <div id="app">
-
   	<app-header></app-header>
-	
-	<!-- <Products /> -->
-	<router-view/>
-  	
+		<router-view/>
   	<app-footer></app-footer>
-
-    
   </div>
 </template>
 
